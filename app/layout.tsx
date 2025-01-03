@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Kantumruy_Pro } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 
-const kantPro = Kantumruy_Pro({
+const kantPro = Libre_Franklin({
   subsets: ["latin"],
 });
 
@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kantPro.className} antialiased m-4`}
+        className={`flex flex-col min-h-screen p-5 ${kantPro.className}`}
       >
         <Navbar/>
-        <div className="bg-black rounded-xl text-white p-4">
+        <div className="bg-black rounded-xl text-white p-8 grow">
           {children}
         </div>
       </body>

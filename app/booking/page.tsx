@@ -1,5 +1,10 @@
-export default function Booking() {
-  <div className="w-full h-full">
-    Booking
-  </div>
+const Booking = () => {
+  return (
+    <div>
+      Booking
+    </div>
+
+  )
 }
+
+export default Booking;

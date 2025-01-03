@@ -1,7 +1,9 @@
 const About = () => {
-  <div className="w-full h-full border border-red-500">
-    About
-  </div>
+  return (
+    <div>
+      About
+    </div>
+  )
 }
 
 export default About;

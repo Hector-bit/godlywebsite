@@ -1,10 +1,22 @@
 import Image from "next/image";
-import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <div className="border border-red-500">
-      home page
+    <div className="relative h-full">
+      <div className="absolute flex justify-center z-[1] w-full">
+        <Image 
+          className="w-1/3"
+          src={"/images/stavros.png"} 
+          alt={"ambassador"} height={1000} width={1000}
+        />
+
+      </div>
+      <div className="relative z-[2] text-5xl font-medium h-full w-full">
+        <div>From dreams </div>
+        <div>to reality: creating </div>
+        <div>brands that change </div>
+        <div>the world.</div>
+      </div>
     </div>
   );
 }

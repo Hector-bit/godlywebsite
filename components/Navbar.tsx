@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row">
-      <div className="grow font-bold text-lg">Godly Productions</div>
+    <div className="flex flex-row items-center mb-2">
+      <div className="grow font-bold text-4xl">Godly</div>
       <div className="flex flex-row gap-x-4 font-medium">
         <Link href={'/'}>Home</Link>
         <Link href={'/about'}>About</Link>
