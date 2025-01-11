@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="relative h-full">
-      <div className="absolute flex justify-center z-[1] w-full">
+      <div className="absolute flex justify-center items-center z-[1] w-full">
         <Image 
           className="w-1/3"
           src={"/images/stavros.png"} 
