@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --textPrimary: #ffffff;
+  --textSecondary: #D9D9D9;
 }
 
 /* MAYBE DO DARK MODE FOR LATER */
