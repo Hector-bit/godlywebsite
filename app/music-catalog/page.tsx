@@ -1,45 +1,34 @@
 import Image from "next/image"
+import { CatalogType } from "@/types/types"
+import CatalogCard from "@/components/CatalogCard"
 
-const songsList = [
+const catalogList:CatalogType[] = [
   {
-    name: 'TItle1',
-    img: 'song1.jpg'
+    albumTitle: 'Soul Searching',
+    img: 'soulsearching.jpg',
+    artist: 'Chelsey Monique'
   },
   {
-    name: 'TItle2',
-    img: 'song2.jpg'
-  },
-  {
-    name: 'TItle3',
-    img: 'song3.jpg'
+    albumTitle: 'Stavos',
+    img: 'stavo.jpg',
+    artist: 'Stavos'
   },
 ]
 
 const MusicCatalog = () => {
   return (
     <div className=''>
-      <div className="font-semibold text-3xl">Recent Projects</div>
+      <div className="font-extrabold text-3xl underline">Recent Projects</div>
       <div className="grid grid-cols-1 divide-y-2 border-white">
-        {songsList.map((song) => {
+        {/* SONG CATALOG  */}
+        {catalogList.map((song) => {
           return (
-            <div key={song.name} className="_project flex flex-row gap-x-5 py-8">
-              <Image
-                className="rounded-xl border border-white" 
-                src={`/images/songImages/${song.img}`} 
-                alt={"song cover"} width={250} height={250}
-              />
-              <div className="flex flex-col justify-between">
-                <div>
-                  <div className="font-semibold text-textSecondary">January 1st 2001</div>
-                  <div className="font-semibold text-textSecondary">Song: songname</div>
-                  <div className="font-semibold text-textSecondary">Artist: artistname</div>
-                  <div className="font-semibold text-textSecondary">Social media: insta, face, youtube, etc.</div>
-                </div>
-                <div>
-                  {'Checkout song on => spotify?, apple?, youtube? insta?'}
-                </div>
-              </div>
-            </div>
+            <CatalogCard 
+              key={`${song.albumTitle}-key`} 
+              albumTitle={song.albumTitle} 
+              img={song.img} 
+              artist={song.artist} 
+            />
           )
         })}
       </div>

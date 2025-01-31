@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import HeaderMenuMobile from "@/components/HeaderMenuMobile";
 
 const kantPro = Libre_Franklin({
   subsets: ["latin"],
@@ -20,10 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex flex-col min-h-screen p-5 ${kantPro.className}`}
+        className={`flex flex-col min-h-screen p-2 sm:p-5 ${kantPro.className}`}
       >
-        <Navbar/>
-        <div className="bg-black rounded-xl text-white p-8 grow">
+        <div className="fade-in duration-150">
+          <Navbar/>
+          <HeaderMenuMobile/>
+
+        </div>
+        <div className="z-[1] relative bg-black rounded-xl text-white p-4 sm:p-8 grow">
           {children}
         </div>
       </body>
