@@ -7,4 +7,5 @@ export type CatalogType = {
   //promotion
   youtube?: string,
   spotify?: string,
+  appleMusic?: string
 } 

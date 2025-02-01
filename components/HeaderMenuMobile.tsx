@@ -11,7 +11,7 @@ const HeaderMenuMobile = ({  }:HeaderMenuMobileProps) => {
   const [isOpen, setIsOpen] = useState<Boolean>(false)
 
   return (
-    <div className="sticky sm:hidden mx-auto max-w-[1400px] z-[2] bg-white h-[90px] sm:h-[140px] bg-primary top-0 flex flex-row justify-between items-center w-full">
+    <div className="sticky sm:hidden mx-auto max-w-[1400px] z-[2] bg-white h-[80px] bg-primary top-0 flex flex-row justify-between items-center w-full">
       {/* <div className="">
         <Image className="max-h-16 sm:max-h-28 w-auto" src='/assets/flag.png' alt="mexico flag" width={999} height={999}/>
       </div> */}

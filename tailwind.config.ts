@@ -13,7 +13,11 @@ export default {
         foreground: "var(--foreground)",
         textPrimary: "var(--textPrimary)",
         textSecondary: "var(--textSecondary)",
+        gold: "var(--gold)",
       },
+      animation: {
+        
+      }
     },
   },
   plugins: [],
