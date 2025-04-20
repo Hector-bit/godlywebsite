@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link";
-import { CatalogType } from "@/types/types";
+import { CatalogType } from "@/app/lib/types";
 
 const CatalogCard = (catalog:CatalogType) => {
   return (
