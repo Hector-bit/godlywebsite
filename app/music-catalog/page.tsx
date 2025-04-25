@@ -48,8 +48,8 @@ const MusicCatalogPage = async() => {
 
   return (
     <div className=''>
-      <div className="font-extrabold text-3xl duration-150 fade-in">Recent Projects</div>
-      {/* <InstagramEmbed url={"https://www.instagram.com/p/C3qq7cLvHTS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="}/> */}
+      <div className="font-extrabold text-3xl duration-150 fade-in">Projects</div>
+      {/* <Image src={"https://i.imgur.com/x43dxw0.png"} alt={""} width={300} height={1000}/> */}
       <div className="grid grid-cols-1 border-white">
         {/* SONG CATALOG  */}
         {artists.map((artist:any) => {
