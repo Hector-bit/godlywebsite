@@ -4,6 +4,7 @@ import CatalogCard from "@/components/CatalogCard"
 import { getArtists } from "../actions/artistActions"
 import InstagramEmbed from "@/components/InstagramEmbed"
 import ButtonLink from "@/components/Buttons/ButtonLink"
+import ArtistList from "@/components/ArtistList"
 
 const catalogList:CatalogType[] = [
   {
@@ -48,18 +49,19 @@ const MusicCatalogPage = async() => {
 
   return (
     <div className=''>
-      <div className="font-extrabold text-3xl duration-150 fade-in">Projects</div>
+      <div className="font-extrabold text-3xl duration-150 fade-in mb-4">Projects</div>
       {/* <Image src={"https://i.imgur.com/x43dxw0.png"} alt={""} width={300} height={1000}/> */}
       <div className="grid grid-cols-1 border-white">
         {/* SONG CATALOG  */}
-        {artists.map((artist:any) => {
+        <ArtistList artistList={artists}/>
+        {/* {artists.map((artist:any) => {
           return (
             <div key={artist._id} className="flex flex-col">
               <div>{artist.artistName}</div>
               <ButtonLink url={`/music-catalog/${artist._id}`}>Artist Discography</ButtonLink>
             </div>
           )
-        })}
+        })} */}
       </div>
     </div>
   )

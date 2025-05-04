@@ -1,0 +1,38 @@
+import Link from "next/link";
+import { ArtistType } from "@/app/lib/types/artistType";
+import Image from "next/image";
+
+const ArtistList = (props: {artistList: ArtistType[]}) => {
+  const artistList = props.artistList
+
+  return (
+    <div className="flex flex-col gap-4">
+      {artistList.map((artist) => {
+        const artistImg = artist.img ? artist.img : 'globe.svg'
+        // const artistLink = artist.link ? artist.link : 'https://godlyproductions.com/'
+        const artistName = artist?.artistName ? artist.artistName : artist.name
+        return (
+          <div 
+            key={artist._id}
+            className=" flex flex-row gap-4 border-2 border-white rounded-xl p-4"
+          >
+            <div className="w-1/3 max-w-[400px]">
+              <Image src={artistImg} alt={"artist"} width={400} height={400}/>
+            </div>
+            <div className="flex flex-row justify-between grow">
+              <div className="font-bold text-xl">{artistName}</div>
+              <Link 
+                href={`/music-catalog/${artist._id}`}
+                className="border-2 border-white rounded-xl h-min p-3 cursor-pointer"
+              >
+                Discography
+              </Link>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export default ArtistList;
