@@ -9,7 +9,7 @@ const ArtistList = (props: {artistList: ArtistType[]}) => {
     <div className="flex flex-col gap-8">
       {artistList.map((artist) => {
         const artistImg = artist.img ? artist.img : 'globe.svg'
-        console.log('artist img: ', artistImg)
+        // console.log('artist img: ', artistImg)
         // const artistLink = artist.link ? artist.link : 'https://godlyproductions.com/'
         const artistName = artist?.artistName ? artist.artistName : artist.name
         return (
