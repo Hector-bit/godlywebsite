@@ -1,6 +1,10 @@
 import Image from "next/image"
-import { CatalogType } from "@/types/types"
+import { CatalogType } from "@/app/lib/types"
 import CatalogCard from "@/components/CatalogCard"
+import { getArtists } from "../actions/artistActions"
+import InstagramEmbed from "@/components/InstagramEmbed"
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import ArtistList from "@/components/ArtistList"
 
 const catalogList:CatalogType[] = [
   {
@@ -39,29 +43,28 @@ const catalogList:CatalogType[] = [
   },
 ]
 
-const MusicCatalog = () => {
+const MusicCatalogPage = async() => {
+  const artists = await getArtists()
+  console.log('ARTIST: ', artists)
+
   return (
     <div className=''>
-      <div className="font-extrabold text-3xl duration-150 fade-in">Recent Projects</div>
+      <div className="font-extrabold text-3xl duration-150 fade-in mb-4">Projects</div>
+      {/* <Image src={"https://i.imgur.com/x43dxw0.png"} alt={""} width={300} height={1000}/> */}
       <div className="grid grid-cols-1 border-white">
         {/* SONG CATALOG  */}
-        {catalogList.map((song) => {
+        <ArtistList artistList={artists}/>
+        {/* {artists.map((artist:any) => {
           return (
-            <CatalogCard 
-              key={`${song.albumTitle}-key`} 
-              albumTitle={song.albumTitle} 
-              img={song.img} 
-              artist={song.artist} 
-              instagram={song.instagram}
-              spotify={song.spotify}
-              youtube={song.youtube}
-              appleMusic={song.appleMusic}
-            />
+            <div key={artist._id} className="flex flex-col">
+              <div>{artist.artistName}</div>
+              <ButtonLink url={`/music-catalog/${artist._id}`}>Artist Discography</ButtonLink>
+            </div>
           )
-        })}
+        })} */}
       </div>
     </div>
   )
 }
 
-export default MusicCatalog;
+export default MusicCatalogPage;
