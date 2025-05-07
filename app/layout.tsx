@@ -3,6 +3,7 @@ import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import HeaderMenuMobile from "@/components/HeaderMenuMobile";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const kantPro = Libre_Franklin({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
         </div>
       </body>
+      <GoogleAnalytics gaId='G-RD6BKEXSF2'/> 
     </html>
   );
 }
