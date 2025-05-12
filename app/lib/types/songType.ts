@@ -3,6 +3,7 @@ export type SongType = {
   __v: number
   songName: string,
   artistId: string,
+  img: string,
   albumId?: string,
   spotifyLink?: string,
   youtubeLink?: string,
