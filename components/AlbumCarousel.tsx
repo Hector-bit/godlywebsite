@@ -53,15 +53,25 @@ export default function AlbumCarousel (props: { albumList: AlbumType[] }) {
         })}
       </Swiper>
       {/* ALBUM SONG LIST */}
-      <div className="flex flex-col my-6">
+      <div className="flex flex-col my-6 border border-white rounded-xl p-3">
         {albumList[currentIndex].albumSongs?.map((albumSong) => {
           return (
-            <div key={albumSong._id} className="flex flex-col">
+            <div key={albumSong._id} className="flex flex-col gap">
               <div className="font-bold text-xl">{albumSong.songName}</div>
               {/* SONG DETAILS */}
               <div className="flex flex-row gap-3 p-2">
                 {albumSong?.spotifyLink &&
                   <Link href={albumSong.spotifyLink}>
+                    <Image src={"/images/sociallogos/spotify.svg"} alt={'Spotify link'} width={40} height={40}/>
+                  </Link>
+                }
+                {albumSong?.youtubeLink &&
+                  <Link href={albumSong.youtubeLink}>
+                    <Image src={"/images/sociallogos/spotify.svg"} alt={'Spotify link'} width={40} height={40}/>
+                  </Link>
+                }
+                {albumSong?.soundCloudLink &&
+                  <Link href={albumSong.soundCloudLink}>
                     <Image src={"/images/sociallogos/spotify.svg"} alt={'Spotify link'} width={40} height={40}/>
                   </Link>
                 }

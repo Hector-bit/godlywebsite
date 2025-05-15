@@ -1,7 +1,6 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 interface HeaderMenuMobileProps {
   // isOpen: boolean
@@ -38,7 +37,6 @@ const HeaderMenuMobile = ({  }:HeaderMenuMobileProps) => {
             <Link className="hover:underline" onClick={() => setIsOpen(false)} href={'/'}>Home</Link>
             <Link className="hover:underline" onClick={() => setIsOpen(false)} href={'/music-catalog'}>Music Catalog</Link>
             <Link className="hover:underline" onClick={() => setIsOpen(false)} href={'/events'}>Events</Link>
-            <Link className="hover:underline" onClick={() => setIsOpen(false)} href={'/news'}>News</Link>
             <Link className="hover:underline" onClick={() => setIsOpen(false)} href={'/booking'}>Booking</Link>
           </div>
         </div>

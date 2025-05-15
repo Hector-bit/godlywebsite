@@ -26,7 +26,7 @@ export default async function ArtistSinglePage (props: { params: Promise<{artist
         )
       })
       :<div className="flex justify-center font-bold text-xl">
-        <div>This artist has no albums</div>
+        <div>This artist has no singles</div>
       </div>
       }
     </div>

@@ -12,7 +12,7 @@ export default async function ArtistPage (props: { params: Promise<{artistId: st
   const artistSongs = await getSongsByArtistId(artistId)
   const artistAlbums = await getAlbumsByArtistId(artistId)
 
-  console.log('artist songs: ', artistSongs, artistAlbums)
+  // console.log('artist songs: ', artistSongs, artistAlbums)
 
   return (
     <div className="flex flex-col gap-8">
